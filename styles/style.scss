@@ -1,0 +1,129 @@
+$primary:#FBC531;
+$secondary: #2F3640;
+$tertiary: #000;
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 90vh;
+  font-family: 'Kulim Park';
+  background: $primary;
+  
+}
+main{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.c-title{
+  background-color: $tertiary;
+  color: $primary;
+  font-size: 3.5rem;
+  text-align: center;
+}
+.l-section{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  
+}
+.c-question{
+  color: $secondary;
+  font-size: 2rem;
+  text-align: center;
+}
+.c-answer{
+  flex: 1;
+  color: $secondary;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.c-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 15rem;
+  height: 4rem;
+}
+
+.c-button__background{
+  background-color: $secondary; 
+  height: 100%;
+  width: 100%;
+  border-radius: .25rem;
+  z-index: 0;
+  cursor: pointer;
+  transition: .2s all cubic-bezier(0.39, 0.575, 0.565, 1);
+  position: relative;
+  overflow: hidden;
+  
+  &::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    height: 100%;
+    width: 35%;
+    background: rgba(255, 255, 255, 0.8);
+    transition: .7s all ease-in-out;
+    transform: skew(30deg);
+    filter: blur(.1rem);
+    opacity: .3;
+    overflow: hidden;
+   
+  }
+  &:hover{
+    transform: scale(1.1);
+  }
+  &:hover::before{
+    left:120%;
+    opacity: .8;
+  }
+}
+.c-button__text{
+  position: absolute;
+  color: white;
+  font: 700 2rem 'Kulim Park', sans-serif;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.u-transition{
+  animation: append-animate .3s ease;
+}
+.u-uppercase{
+  text-transform: uppercase;
+}
+
+
+
+@keyframes append-animate {
+	from {
+		transform: scale(0);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;	
+	}
+}
+
+@media (max-width:767px) {
+  .c-title{
+    font-size: 2rem;
+  }
+}

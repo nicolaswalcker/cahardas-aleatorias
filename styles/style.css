@@ -1,0 +1,190 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 90vh;
+  font-family: 'Kulim Park';
+  background: #FBC531;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.c-title {
+  background-color: #000;
+  color: #FBC531;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.l-section {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.c-question {
+  color: #2F3640;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.c-answer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #2F3640;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.c-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 15rem;
+  height: 4rem;
+}
+
+.c-button__background {
+  background-color: #2F3640;
+  height: 100%;
+  width: 100%;
+  border-radius: .25rem;
+  z-index: 0;
+  cursor: pointer;
+  -webkit-transition: 0.2s all cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: 0.2s all cubic-bezier(0.39, 0.575, 0.565, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.c-button__background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  height: 100%;
+  width: 35%;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-transition: .7s all ease-in-out;
+  transition: .7s all ease-in-out;
+  -webkit-transform: skew(30deg);
+          transform: skew(30deg);
+  -webkit-filter: blur(0.1rem);
+          filter: blur(0.1rem);
+  opacity: .3;
+  overflow: hidden;
+}
+
+.c-button__background:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.c-button__background:hover::before {
+  left: 120%;
+  opacity: .8;
+}
+
+.c-button__text {
+  position: absolute;
+  color: white;
+  font: 700 2rem 'Kulim Park', sans-serif;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.u-transition {
+  -webkit-animation: append-animate .3s ease;
+          animation: append-animate .3s ease;
+}
+
+.u-uppercase {
+  text-transform: uppercase;
+}
+
+@-webkit-keyframes append-animate {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes append-animate {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .c-title {
+    font-size: 2rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

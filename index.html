@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charadas aleatórias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kulim+Park:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1 class="c-title u-uppercase">O que tem para mim hoje?</h1>
+      <section class="l-section">
+        <h2 class="c-question js-question"></h2>
+        <p class="c-answer js-answer"></p> 
+      </section>
+    </main>
+    <footer>
+      <div class="c-button js-button" onclick="clickButton()">
+        <p class="c-button__text">Clicar aqui!</p>
+        <div class="c-button__background"></div>
+      </div>
+      <p>Todas as piadas foram pegas <a target="_blank" href="https://www.osvigaristas.com.br/charadas/">aqui</a></p></footer>
+    <script src="./main.js"></script>
+  </body>
+</html>
