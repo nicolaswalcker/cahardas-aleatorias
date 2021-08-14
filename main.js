@@ -3,7 +3,6 @@ const question = document.querySelector(".js-question");
 const answer = document.querySelector(".js-answer");
 
 const showData = (result) => {
-  
   let randomRiddleIndex = Math.floor(Math.random() * result.piadas.length);
   let activeRiddle = result.piadas[randomRiddleIndex];
 
