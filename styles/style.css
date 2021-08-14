@@ -147,9 +147,14 @@ footer {
   pointer-events: none;
 }
 
-.u-transition {
+.u-transition-append {
   -webkit-animation: append-animate .3s ease;
           animation: append-animate .3s ease;
+}
+
+.u-transition-remove {
+  -webkit-animation: remove-animate .3s ease;
+          animation: remove-animate .3s ease;
 }
 
 .u-uppercase {
@@ -179,6 +184,32 @@ footer {
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes remove-animate {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes remove-animate {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
   }
 }
 

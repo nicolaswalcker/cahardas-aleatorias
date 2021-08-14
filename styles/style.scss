@@ -102,9 +102,13 @@ footer{
   pointer-events: none;
 }
 
-.u-transition{
+.u-transition-append{
   animation: append-animate .3s ease;
 }
+.u-transition-remove{
+  animation: remove-animate .3s ease;
+}
+
 .u-uppercase{
   text-transform: uppercase;
 }
@@ -119,6 +123,17 @@ footer{
 	to {
 		transform: scale(1);
 		opacity: 1;	
+	}
+}
+
+@keyframes remove-animate {
+	from {
+		transform: scale(1);
+		opacity: 1;
+	}
+	to {
+		transform: scale(0);
+		opacity: 0;	
 	}
 }
 
